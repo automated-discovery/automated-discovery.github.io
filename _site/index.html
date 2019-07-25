@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems | Automated Discovery in Science and Engineering</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Automated Discovery in Science and Engineering" />
+<script type="application/ld+json">
+{"name":"Automated Discovery in Science and Engineering","@type":"WebSite","url":"http://localhost:4000/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/media/image/logo.png"}},"headline":"Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=83ebe3c333f334c190e03e8bc66c40ba310a45e9">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+    <h1><a href="http://localhost:4000/">Automated Discovery in Science and Engineering</a> </h1>
+	<header>
+        
+          <img src="/assets/media/image/logo.png" alt="Logo" />
+        
+
+        <p></p>
+
+
+        <p class="view"><a href='./main.html'>Home</a></p>
+        <p class="view"><a href='./index.html'>Automated Discovery of Patterns in Morphogenetic Systems</a></p>
+
+	<!--<p class="view"><a href='./assets/media/paper/Automated_Discovery.pdf'>Download the Paper</a></p>-->
+
+        <!--<p class="view"><a href='https://github.com/intrinsically-motivated-discovery'>View the Source Code on GitHub [coming soon] <small>intrinsically-motivated-discovery/autodisc</small></a></p>-->
+        
+
+        
+      </header>
+      <section>
+
+      <h2 id="intrinsically-motivated-exploration-for-automated-discovery-of-patterns-in-morphogenetic-systems">Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems</h2>
+
+<p style="color:gray; font-size: 150%; text-align: center;"><a href="/assets/media/paper/Automated_Discovery.pdf">[Download the Paper]</a></p>
+
+<p>Intrinsically motivated goal exploration processes (IMGEPs) were shown to enable autonomous agents to efficiently explore and map the diversity of the effects they can produce on their environment.
+With IMGEPs, agents self-define their own experiments by imagining goals, then try to achieve them by leveraging their past discoveries.
+Progressively they learn which goals are achievable and which are not.
+IMGEPs were shown to enable efficient discovery and learning of diverse repertoires of skills in high-dimensional robots.</p>
+
+<p>We show that the IMGEP framework can also be used in an entirely different application area: automated discovery of self-organized patterns in complex morphogenetic systems.
+We also introduce a new IMGEP algorithm where goal representations are learned online and incrementally (past approaches used precollected training data with batch learning).
+For experimentation, we use Lenia, a continuous game-of-life cellular automaton.
+We study how IMGEPs algorithms enable to discover a variety of complex self-organized visual patterns.
+We compare random search and goal exploration methods with hand-defined, pretrained and online learned goal spaces.
+The results show that goal exploration methods identify more diverse patterns compared to random exploration.
+Moreover, the online learned goal spaces allow to successfully discover interesting patterns similar to the ones manually identified by human experts.</p>
+
+<p>Our results exemplify the ability of IMGEPs to aid the discovery of novel structures and patterns in complex systems. We are optimistic that their application will aid the understanding and discovery of new knowledge in various domains of science and engineering.</p>
+
+<hr />
+
+<p>This page provides further information about:</p>
+<ul>
+  <li>IMGEPs</li>
+  <li>Lenia, the target system used for the experiments</li>
+  <li>Examples of patterns that could be identified with help of IMGEPs</li>
+  <li>A video of our software to visualize the identified patterns and goal spaces</li>
+</ul>
+
+<p>The source code to replicate the results of the paper will be added here soon.</p>
+
+<p>Please note that this page is currently under construction and more content will come soon!</p>
+
+<hr />
+
+<h3 id="intrinsically-motivated-goal-exploration-processes-imgeps">Intrinsically Motivated Goal Exploration Processes (IMGEPs)</h3>
+
+<p>An IMGEP is a sequence of experiments that explore the parameters of a system by targeting self-generated goals. 
+It aims to maximize the diversity of observations from that system within a budget of n experiments.</p>
+
+<p>The systems are defined by three components.
+A parameterization space corresponding to their controllable parameters.
+An observation space where an observation is a vector representing all the signals captured from the system.
+Finally, an unknown environment dynamic which maps parameters to observations.</p>
+
+<p><img src="/assets/media/image/png/imgep_overview.png" alt="IMGEP" /></p>
+
+<p>To explore a system, an IMGEP defines a goal space that represents relevant features of its observations.
+For a robot that has to manipulate objects and observes them with a video camera, those features could be the object positions.
+From this goal space a goal is sampled by a goal sampling distribution.
+For the robot example this would correspond to a sampling of positions to where the robot should move the objects.
+Then, a parameter is chosen that should be explored in order to reach the goal.
+Usually the parameter selection and in some cases the goal sampling distribution take into account previous explorations which are stored in a history.
+After a parameter is selected it is explored on the system and the outcome observed.
+Based on the observation the actually reached goal is computed and together with its corresponding parameter and observation stored in history.
+The exploration process is repeated until a certain number of steps or another constraint is reached.
+Because the sampling of goals and parameters depend on a history of explored parameters, an initial set of parameters are randomly sampled and explored before the goal exploration process starts.</p>
+
+<p>Depending on the algorithmic instantiation of this architecture, different goal and parameter sampling mechanisms can be used.
+For this paper we chose for both simple approaches.
+Goals are sampled from a uniform distribution over the goal space.
+Parameters are chosen by selecting for a given goal the parameter from the history whose reached goal has the shortest distance in the goal space to the given goal.
+This parameter is then mutated to by a random process.</p>
+
+<hr />
+<h3 id="target-system-lenia---a-continuous-cellular-automaton">Target System: Lenia - A Continuous Cellular Automaton</h3>
+<p>We tested different IMGEp approaches on Lenia <a href="https://arxiv.org/abs/1812.05433">[arXiv]</a>, a continuous cellular automaton similar to Conway’s Game of Life.</p>
+
+<p>The following video by its creator shows possible patterns that can be generated with Lenia:</p>
+
+<iframe width="720" height="405" src="https://www.youtube.com/embed/iE46jKYcI4Y" frameborder="0" allowfullscreen=""></iframe>
+<p><br />
+<br />
+<a href="https://chakazul.github.io/Lenia/JavaScript/Lenia.html">
+Explore Lenia online: <small>https://chakazul.github.io/Lenia/JavaScript/Lenia.html</small> <img src="https://raw.githubusercontent.com/Chakazul/Lenia/master/Screencap/JavaScript.png" alt="lenia javascript program link" /> </a></p>
+
+<hr />
+<h3 id="discovered-patterns">Discovered Patterns</h3>
+
+<p>The diversity, measured in number of explored bins in the parameter and a statistic space, shows that the IMGEP approaches are able to find a higher diversity of patterns although a random parameter search has a higher diversity in the parameter space.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Diversity in Parameter Space</td>
+      <td>Diversity in Statistic Space</td>
+    </tr>
+    <tr>
+      <td><img src="/assets/media/image/png/diversity_runparamspace_all.png" alt="" /></td>
+      <td><img src="/assets/media/image/png/diversity_statisticspace_all.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Statistic Space Diversity for Animals</td>
+      <td>Statistic Space Diversity for Non-Animals</td>
+    </tr>
+    <tr>
+      <td><img src="/assets/media/image/png/diversity_statisticspace_animals.png" alt="" /></td>
+      <td><img src="/assets/media/image/png/diversity_statisticspace_animals.png" alt="" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following two figures illustrate the ratio of identified pattern classes (animal, non-animal, dead) for two IMGEP algorithms and show some examples for each class.
+The first (IMGEP-HGS) uses a hand-defined goal space and can find many non-animal patterns.
+The second (IMGEP-OGL) has a goal space which was learned via a variational autoencoder during the exploration and is able to find more animals.</p>
+
+<p><img src="https://raw.githubusercontent.com/intrinsically-motivated-discovery/intrinsically-motivated-discovery.github.io/master/assets/media/image/png/imgep_hgs_discoveries.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/intrinsically-motivated-discovery/intrinsically-motivated-discovery.github.io/master/assets/media/image/png/imgep_ogl_discoveries.png" alt="" /></p>
+
+<h4 id="visualisation-of-learned-goal-spaces">Visualisation of Learned Goal Spaces</h4>
+
+<p>The results of the exploration can be visualized by a two-dimensional reduction of the goal space.
+The following video shows the visualization for the IMGEP-OGL and IMGEP-HGS results.</p>
+
+<iframe width="720" height="405" src="https://youtube.com/embed/J_6ULBbAYOA" frameborder="0" allowfullscreen=""></iframe>
+
+<hr />
+<h3 id="acknowledgement">Acknowledgement</h3>
+<p>We would like to thank Bert Chan for the valuable discussions and for providing the source code of Lenia.</p>
+
+
+      </section>
+      <footer>
+        <!--
+        <p>This project is maintained by <a href="https://github.com/intrinsically-motivated-discovery">intrinsically-motivated-discovery</a></p>
+        -->
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
