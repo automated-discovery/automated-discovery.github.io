@@ -2,8 +2,11 @@
 layout: default
 ---
 ## Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems
-[[Chris Reinke]](http://www.scirei.net), Mayalen Etcheverry, [[Pierre-Yves Oudeyer]](http://www.pyoudeyer.com/)
-[[Flowers Lab]](https://flowers.inria.fr), Inria
+[Chris Reinke](http://www.scirei.net), Mayalen Etcheverry, [Pierre-Yves Oudeyer](http://www.pyoudeyer.com/)
+{: style="font-size: 110%; text-align: center;"}
+
+[Flowers Lab](https://flowers.inria.fr), Inria
+{: style="font-size: 110%; text-align: center;"}
 
 [[Download the Paper]](./assets/media/paper/Automated_Discovery.pdf)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [[Download the Source Code]](https://github.com/flowersteam/automated_discovery_of_lenia_patterns)
 {: style="color:gray; font-size: 150%; text-align: center;"}
