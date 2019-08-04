@@ -2,8 +2,10 @@
 layout: default
 ---
 ## Intrinsically Motivated Exploration for Automated Discovery of Patterns in Morphogenetic Systems
+[[Chris Reinke]](http://www.scirei.net), Mayalen Etcheverry, [[Pierre-Yves Oudeyer]](http://www.pyoudeyer.com/)
+[[Flowers Lab]](https://flowers.inria.fr), Inria
 
-[[Download the Paper]](./assets/media/paper/Automated_Discovery.pdf)
+[[Download the Paper]](./assets/media/paper/Automated_Discovery.pdf)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [[Download the Source Code]](https://github.com/flowersteam/automated_discovery_of_lenia_patterns)
 {: style="color:gray; font-size: 150%; text-align: center;"}
 
 Intrinsically motivated goal exploration processes (IMGEPs) were shown to enable autonomous agents to efficiently explore and map the diversity of the effects they can produce on their environment.
@@ -90,7 +92,7 @@ The diversity, measured in number of explored bins in the parameter and a statis
 |![](./assets/media/image/png/diversity_runparamspace_all.png) | ![](./assets/media/image/png/diversity_statisticspace_all.png)|
 
 | Statistic Space Diversity for Animals                             |  Statistic Space Diversity for Non-Animals                        |
-|![](./assets/media/image/png/diversity_statisticspace_animals.png) | ![](./assets/media/image/png/diversity_statisticspace_animals.png)|
+|![](./assets/media/image/png/diversity_statisticspace_animals.png) | ![](./assets/media/image/png/diversity_statisticspace_nonanimals.png)|
 
 
 
@@ -106,12 +108,17 @@ The second (IMGEP-OGL) has a goal space which was learned via a variational auto
 ![](https://raw.githubusercontent.com/intrinsically-motivated-discovery/intrinsically-motivated-discovery.github.io/master/assets/media/image/png/imgep_ogl_discoveries.png)
 
 
+
+The following video shows some example patterns that have been discovered automatically during one exploration experiment with the IMGEP-OGL algorithm:
+<iframe width="720" height="405" src="https://youtube.com/embed/qxxs_Sga1xQ" frameborder="0" allowfullscreen></iframe>
+
+
 #### Visualisation of Learned Goal Spaces
 
 The results of the exploration can be visualized by a two-dimensional reduction of the goal space.
 The following video shows the visualization for the IMGEP-OGL and IMGEP-HGS results.
 
-<iframe width="720" height="405" src="https://youtube.com/embed/J_6ULBbAYOA" frameborder="0" allowfullscreen></iframe>
+<iframe width="720" height="405" src="https://youtube.com/embed/oMh2CGb-86M" frameborder="0" allowfullscreen></iframe>
 
 * * *
 ### Acknowledgement
