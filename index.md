@@ -44,7 +44,7 @@ A parameterization space corresponding to their controllable parameters.
 An observation space where an observation is a vector representing all the signals captured from the system.
 Finally, an unknown environment dynamic which maps parameters to observations.
 
-![IMGEP](./assets/media/image/png/imgep_overview.png)
+![IMGEP](./assets/media/image/png/imgep_overview.png){: .center-image }
 
 To explore a system, an IMGEP defines a goal space that represents relevant features of its observations.
 For a robot that has to manipulate objects and observes them with a video camera, those features could be the object positions.
