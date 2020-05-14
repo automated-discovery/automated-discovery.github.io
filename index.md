@@ -2,7 +2,7 @@
 layout: default
 ---
 ## Intrinsically Motivated Discovery of <br> Diverse Patterns in Self-Organizing Systems
-[Chris Reinke](http://www.scirei.net), [Mayalen Etcheverry](https://fr.linkedin.com/in/mayalenetcheverry), [Pierre-Yves Oudeyer](http://www.pyoudeyer.com/) 
+[Chris Reinke](http://www.scirei.net), [Mayalen Etcheverry](https://mayalenetcheverry.com), [Pierre-Yves Oudeyer](http://www.pyoudeyer.com/) 
 {: style="font-size: 140%; text-align: center;"}
 
 November 2019 
