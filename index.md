@@ -9,8 +9,8 @@ November 2019
 {: style="font-size: 140%; text-align: center;"}
 
 
-[[Download the Paper]](./assets/media/paper/Automated_Discovery.pdf)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [[Download the Source Code]](https://github.com/flowersteam/automated_discovery_of_lenia_patterns)
-{: style="color:gray; font-size: 150%; text-align: center;"}
+[[Download the Paper]](./assets/media/paper/Automated_Discovery.pdf) &nbsp; [[Read the Blogpost]](https://developmentalsystems.org/intrinsically_motivated_discovery_of_diverse_patterns) &nbsp; [[Download the Source Code]](https://github.com/flowersteam/automated_discovery_of_lenia_patterns)
+{: style="color:gray; font-size: 140%; text-align: center;"}
 
 In many complex dynamical systems, artificial or natural, one can observe selforganization of patterns emerging from local rules. 
 Cellular automata, like the Game of Life (GOL), have been widely used as abstract models enabling the study of various aspects of self-organization and morphogenesis, such as the emergence of spatially localized patterns. However, findings of self-organized patterns in
